@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { Button } from 'reactstrap';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
           Learn React
         </a>
       </header>
+      { /* Este es solo un ejemplo de como usar los controles de reactstrap */ }
+      <Button color='secondary' >Guardar</Button>
     </div>
   );
 }
