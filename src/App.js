@@ -1,26 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
-import { Button } from 'reactstrap';
+import Texto from './componentes/Texto/Texto';
+import Numero from './componentes/Numero/Numero';
+import { Container } from 'reactstrap';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      { /* Este es solo un ejemplo de como usar los controles de reactstrap */ }
-      <Button color='secondary' >Guardar</Button>
+      <Container>
+        { /* Este es solo un ejemplo de como usar los controles */ }
+        <Texto texto={"Nombre Articulo"} mensaje={"Digite el nombre del articulo"} nombre={"nombreArticulo"} />
+        <Numero texto={"Valor del Articulo"} mensaje={"Valor del articulo"} nombre={"valorArticulo"} />
+        <Texto texto={"Descripción del articulo"} mensaje={"Agregue una descripcion del articulo"} nombre={"descripcionArticulo"} />
+      </Container>
     </div>
   );
 }
