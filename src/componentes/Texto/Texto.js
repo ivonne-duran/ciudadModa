@@ -1,15 +1,27 @@
 import React from "react";
 import "../comunes/colores.css";
 import Etiqueta from "../Etiqueta/Etiqueta";
-import { FormGroup, Input } from "reactstrap";
+import { Col, Form, FormGroup, Input, Label } from "reactstrap";
 
-const Texto = ({texto, nombre, mensaje}) => {
-    return(
-        <FormGroup>
-            <Etiqueta para={nombre} texto={texto}/>
-            <Input type="text" name={nombre} placeholder={mensaje} className="borde-naranja"/>
-        </FormGroup>
-    );
-}
+const Texto = ({ texto, nombre, mensaje }) => {
+  return (
+    <Form>
+      <FormGroup row>
+        <Label sm={2}>
+          <Etiqueta para={nombre} texto={texto} />
+        </Label>
+        <Col sm={4}>
+          <Input
+          type="text"
+          name={nombre}
+          placeholder={mensaje}
+          className="borde-naranja"
+        />
+        </Col>
+        
+      </FormGroup>
+    </Form>
+  );
+};
 
 export default Texto;
