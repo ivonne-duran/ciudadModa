@@ -7,10 +7,10 @@ const Numero = ({ texto, nombre, mensaje }) => {
   return (
     <Form>
       <FormGroup row>
-        <Label sm={2}>
+        <Label sm={5}>
           <Etiqueta para={nombre} texto={texto} />
         </Label>
-        <Col sm={4}>
+        <Col sm={7}>
           <Input
             className="borde-naranja"
             type="number"

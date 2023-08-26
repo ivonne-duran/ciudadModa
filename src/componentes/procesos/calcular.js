@@ -5,12 +5,13 @@ export function lineaRecta(articulo){
         return [];
     
     let filas = []; 
-    let depreciacion = (articulo.valorArticulo - articulo.valorResidual) / articulo.vidaUtil;
+    let depreciacion = 0;
     let depreciacionAcumulada = 0;
     
     for (let anio = 0; anio <= articulo.vidaUtil; anio++) {
         let valorLibros = articulo.valorArticulo - depreciacionAcumulada;
         let fila = new Fila(anio, depreciacion, depreciacionAcumulada, valorLibros);
+        depreciacion = (articulo.valorArticulo - articulo.valorResidual) / articulo.vidaUtil;
         depreciacionAcumulada += depreciacion;
         filas.push(fila);
     }
