@@ -44,3 +44,29 @@ export function depreciacionAcelerada(articulo) {
 
     return filas;
 }
+
+export function depreciacionPorUso(articulo) {
+    if (articulo===null)
+        return []
+
+    let filas = []
+    let depreciacionAcumulada = 0
+    let depreciacion = 0
+    let tasaDepreciacion = depreciacionPorHora(articulo)
+    console.log("tasa de depreciacion: ", tasaDepreciacion)
+    for (let anio = 0; anio <= articulo.vidaUtil; anio++) {
+        let valorLibros = articulo.valorArticulo - depreciacionAcumulada
+        let fila = new Fila(anio, depreciacion, depreciacionAcumulada, valorLibros)
+        filas.push(fila)
+
+        depreciacion = articulo.promedioUso * tasaDepreciacion
+        console.log("Depreciacion: ", depreciacion, " Depreciacion acumulada: ", depreciacionAcumulada)
+        depreciacionAcumulada += depreciacion;
+    }
+
+    return filas;
+}
+
+export function depreciacionPorHora(articulo) {
+    return (articulo.valorArticulo - articulo.valorResidual) / (articulo.vidaUtil * articulo.promedioUso)
+}

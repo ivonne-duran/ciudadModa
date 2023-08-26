@@ -1,7 +1,8 @@
 import './App.css';
-import Navbar from './componentes/Navbar/Navbar';
+import Encabezado from './componentes/Encabezado/Encabezado';
 import { Col, Container, Row } from 'reactstrap';
 import LineaRecta from './componentes/LineaRecta/LineaRecta';
+import BarraNavegacion from './componentes/BarraNavegacion/BarraNavegacion';
 
 function App() {
   return (
@@ -9,7 +10,14 @@ function App() {
       <Container>
         <br/>
         <Row>
-          <Navbar/>
+          <Col>
+            <Encabezado/>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <BarraNavegacion />
+          </Col>
         </Row>
         <br/>
         <Row>

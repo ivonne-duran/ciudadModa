@@ -3,7 +3,7 @@ import logo from "./logoCM.png";
 import { Col, Container, Row } from "reactstrap";
 import "../comunes/colores.css";
 
-const Navbar = () => {
+const Encabezado = () => {
   return (
     <Container>
       <Row>
@@ -18,11 +18,11 @@ const Navbar = () => {
           <h5 className="color-azul">Ciudad de la moda</h5>
         </Col>
         <Col xs={6} md={5}>
-          <h1 className="color-azul">DEPRECIACIÓN CONTABLE</h1>
+          <h2 className="color-azul">DEPRECIACIÓN CONTABLE</h2>
         </Col>
       </Row>
     </Container>
   );
 };
 
-export default Navbar;
+export default Encabezado;

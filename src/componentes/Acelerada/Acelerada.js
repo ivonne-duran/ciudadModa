@@ -4,10 +4,10 @@ import Numero from "../Numero/Numero";
 import Tabla from "../Tabla/Tabla";
 import "../comunes/colores.css";
 import Articulo from "../comunes/objetos/articulo.js"
-import { lineaRecta } from "../procesos/calcular.js"
+import { depreciacionAcelerada } from "../procesos/calcular.js"
 import BarraNavegacion from "../BarraNavegacion/BarraNavegacion";
 
-const LineaRecta = () => {
+const Acelerada = () => {
     const [filas, actualizarFilas] = useState(null)
 
     const calcular = () => {
@@ -15,7 +15,7 @@ const LineaRecta = () => {
         let residual = document.getElementById("valorResidualArticulo").value
         let vida = document.getElementById("vidaUtil").value
         let art = new Articulo(valor, residual, vida)
-        actualizarFilas(lineaRecta(art))
+        actualizarFilas(depreciacionAcelerada(art))
     }
 
     return (
@@ -32,7 +32,7 @@ const LineaRecta = () => {
                         <CardHeader>
                             <Row>
                                 <Col>
-                                    <h4 className="color-naranja" style={{textAlign:"center"}}>Líne Recta</h4>
+                                    <h4 className="color-naranja" style={{textAlign:"center"}}>Depreciación Acelerada</h4>
                                 </Col>
                             </Row>
                             <Row>
@@ -70,4 +70,4 @@ const LineaRecta = () => {
 
 
 
-export default LineaRecta
+export default Acelerada

@@ -9,16 +9,16 @@ const Tabla = ({filas}) => {
             <Table hover className="color-naranja">
                 <thead>
                     <tr>
-                        <th>
+                        <th style={{textAlign:"center"}}>
                             Período
                         </th>
-                        <th>
+                        <th style={{textAlign:"end"}}>
                             Depreciación
                         </th>
-                        <th>
+                        <th style={{textAlign:"end"}}>
                             Depreciación Acumulada
                         </th>
-                        <th>
+                        <th style={{textAlign:"end"}}>
                             Valor en Libros
                         </th>
                     </tr>

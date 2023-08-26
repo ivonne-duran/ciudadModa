@@ -1,13 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import LineaRecta from './componentes/LineaRecta/LineaRecta';
+import { Container } from 'reactstrap';
+import Acelerada from './componentes/Acelerada/Acelerada';
+import PorUso from './componentes/PorUso/PorUso';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <LineaRecta />
+  },
+  {
+    path: "/lineaRecta",
+    element: <LineaRecta />
+  },
+  {
+    path: "/acelerada",
+    element: <Acelerada />
+  },
+  {
+    path: "/porUso",
+    element: <PorUso />
+  }
+])
+
 root.render(
   <React.StrictMode>
-    <App />
+      <RouterProvider router={router} />
   </React.StrictMode>
 );
 
