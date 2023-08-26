@@ -1,21 +1,23 @@
 import React from "react";
 import "../comunes/colores.css";
 import Etiqueta from "../Etiqueta/Etiqueta";
-import { Col, Form, FormGroup, Input, Label } from "reactstrap";
+import { Col, Form, FormGroup, Input } from "reactstrap";
 
-const Numero = ({ texto, nombre, mensaje }) => {
+const Numero = ({ texto, nombre, mensaje, handleChange }) => {
   return (
     <Form>
       <FormGroup row>
-        <Label sm={5}>
+        <Col sm={4}>
           <Etiqueta para={nombre} texto={texto} />
-        </Label>
-        <Col sm={7}>
+        </Col>
+        <Col sm={8}>
           <Input
             className="borde-naranja"
             type="number"
             name={nombre}
+            id={nombre}
             placeholder={mensaje}
+            onKeyUp={handleChange}
           />
         </Col>
       </FormGroup>
