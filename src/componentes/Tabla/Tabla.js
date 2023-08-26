@@ -25,7 +25,7 @@ const Tabla = ({filas}) => {
                 </thead>
                 <tbody>
                     {
-                        filas.map( (fila, index) =>
+                        filas?.map( (fila, index) =>
                             <Fila fila={fila} key={index}/>
                         )
                     }
