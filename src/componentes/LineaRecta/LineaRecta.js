@@ -32,7 +32,7 @@ const LineaRecta = () => {
                         <CardHeader>
                             <Row>
                                 <Col>
-                                    <h4 className="color-naranja" style={{textAlign:"center"}}>Líne Recta</h4>
+                                    <h4 className="color-naranja" style={{textAlign:"center"}}>Línea Recta</h4>
                                 </Col>
                             </Row>
                             <Row>
