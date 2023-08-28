@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ciudadModa/static/css/main.1e395f9c.css",
+    "main.js": "/ciudadModa/static/js/main.933d6088.js",
+    "static/js/787.9d6922d9.chunk.js": "/ciudadModa/static/js/787.9d6922d9.chunk.js",
+    "static/media/logoCM.png": "/ciudadModa/static/media/logoCM.c504a1bbb1690ad64355.png",
+    "index.html": "/ciudadModa/index.html",
+    "main.1e395f9c.css.map": "/ciudadModa/static/css/main.1e395f9c.css.map",
+    "main.933d6088.js.map": "/ciudadModa/static/js/main.933d6088.js.map",
+    "787.9d6922d9.chunk.js.map": "/ciudadModa/static/js/787.9d6922d9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1e395f9c.css",
+    "static/js/main.933d6088.js"
+  ]
+}
